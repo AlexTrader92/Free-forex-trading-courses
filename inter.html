@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Trading Education Library | ICT, SMC & Forex Courses</title>
+    <meta name="description" content="Explore a massive trading education library covering ICT, price action, market structure, order flow, Forex, futures, stocks, psychology and risk management.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourdomain.github.io/">
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Premium Trading Education Library">
+    <meta property="og:description" content="Explore a massive trading education library covering ICT, price action, market structure, order flow, Forex, futures, stocks, psychology and risk management.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            --bg: #05070b;
+            --surface: #0f151e;
+            --surface-hover: #1a222f;
+            --border: #202733;
+            --accent: #67f2b2;
+            --accent-hover: #52c891;
+            --text-main: #ffffff;
+            --text-muted: #9ba6b5;
+            --radius: 12px;
+            --transition: all 0.2s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 7, 11, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #06120c;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--border);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background: var(--surface);
+            border-color: var(--text-muted);
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid rgba(103, 242, 178, 0.3);
+            background: rgba(103, 242, 178, 0.05);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Stats Grid */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 32px;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .stat-card span {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .pricing-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--accent);
+            background: linear-gradient(180deg, rgba(103,242,178,0.05) 0%, var(--surface) 100%);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #000;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .pricing-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .pricing-features {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Course Search & Grid */
+        .search-container {
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 18px 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-main);
+            font-size: 16px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            border-color: var(--accent);
+        }
+
+        .categories {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            scrollbar-width: none;
+        }
+
+        .categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-btn {
+            white-space: nowrap;
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-btn.active, .category-btn:hover {
+            color: var(--bg);
+            background: var(--text-main);
+            border-color: var(--text-main);
+        }
+
+        .result-count {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 15px;
+        }
+
+        .course-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .course-card h3 {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .course-tag {
+            background: rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .course-id {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px dashed var(--border);
+        }
+
+        /* Video Section */
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Free Resources Banner */
+        .free-banner {
+            background: linear-gradient(135deg, #0d1612 0%, var(--surface) 100%);
+            border: 1px solid #1a3a2a;
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Footer & Disclaimer */
+        .disclaimer {
+            background: rgba(255, 0, 0, 0.05);
+            border: 1px solid rgba(255, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: var(--radius);
+            font-size: 13px;
+            color: #b0b8c3;
+            margin-bottom: 40px;
+        }
+
+        .disclaimer strong {
+            color: #ff6b6b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-main);
+            transition: var(--transition);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg);
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            section {
+                padding: 40px 0;
+            }
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav">
+            <a href="#" class="logo">FOREX<span>VAULT</span></a>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#pricing">Pricing</a>
+                <a href="#catalog">Featured Catalog</a>
+                <a href="#proof">Proof</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 8px 16px;">Request Access</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container" style="border-top: none;">
+            <div class="badge">PREMIUM TRADING EDUCATION LIBRARY</div>
+            <h1>Stop Wasting Money on Random Trading Courses.</h1>
+            <p>Explore a massive trading education library covering ICT, price action, market structure, order flow, Forex, futures, stocks, psychology and risk management.</p>
+            
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary">Explore Pricing</a>
+                <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-outline">Join Free Resources</a>
+            </div>
+        </section>
+
+        <section class="container" style="border-top: none; padding-top: 0;">
+            <div class="stats">
+                <div class="stat-card">
+                    <strong>1000+</strong>
+                    <span>Premium Courses</span>
+                </div>
+                <div class="stat-card">
+                    <strong>25,000+</strong>
+                    <span>Education Files</span>
+                </div>
+                <div class="stat-card">
+                    <strong>Direct</strong>
+                    <span>Individual Requests</span>
+                </div>
+                <div class="stat-card">
+                    <strong>Searchable</strong>
+                    <span>Organized Database</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="container">
+            <div class="section-header">
+                <h2>Choose Exactly What You Need</h2>
+                <p>Request specific access directly through our secure Telegram channel.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Single Course</h3>
+                    <div class="price">$14</div>
+                    <ul class="pricing-features">
+                        <li>Choose one specific course</li>
+                        <li>Direct file access</li>
+                        <li>High-speed download</li>
+                    </ul>
+                    <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-outline btn-block">Request Single Course</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-tag">Strongest Value</div>
+                    <h3>1000+ Library</h3>
+                    <div class="price">$70</div>
+                    <ul class="pricing-features">
+                        <li>Access the complete premium library</li>
+                        <li>ICT, SMC, Order Flow & more</li>
+                        <li>Future updates included</li>
+                        <li>Organized directory structure</li>
+                    </ul>
+                    <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-primary btn-block">Request Full Library</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Top 100</h3>
+                    <div class="price">$40</div>
+                    <ul class="pricing-features">
+                        <li>Access the curated Top 100 selection</li>
+                        <li>Most requested strategies</li>
+                        <li>Verified quality resources</li>
+                    </ul>
+                    <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-outline btn-block">Get Top 100</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="container">
+            <div class="section-header">
+                <h2>Featured Course Catalog</h2>
+                <p>Search our sample index of the Top 100 most requested courses. The full 1000+ library contains much more.</p>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search by course name, mentor, or topic (e.g., ICT, SMC, Forex)...">
+            </div>
+
+            <div class="categories" id="categoryFilter">
+                <!-- Categories populated by JS -->
+            </div>
+
+            <div class="result-count" id="resultCount">Showing all featured courses</div>
+
+            <div class="course-grid" id="courseGrid">
+                <!-- Courses populated by JS -->
+            </div>
+        </section>
+
+        <section id="proof" class="container">
+            <div class="section-header">
+                <h2>See the Library in Action</h2>
+                <p>Watch a raw preview of our organized directory structure.</p>
+            </div>
+            
+            <div class="video-container">
+                <!-- IMPORTANT: Place your actual video file at assets/proof-video.mp4 -->
+                <video controls preload="none" poster="assets/proof-poster.jpg">
+                    <source src="assets/proof-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="free" class="container">
+            <div class="free-banner">
+                <h2 style="margin-bottom: 15px;">Start With Free Trading Resources</h2>
+                <p style="color: var(--text-muted); margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">Join our public Telegram channel for free market insights, selective resource drops, and structural trading updates completely separate from the premium library.</p>
+                <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-primary">Join Free Telegram</a>
+            </div>
+        </section>
+
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">What is included in the 1000+ library?</div>
+                    <div class="faq-answer">It is a comprehensive database containing over 1000 educational resources covering Forex, ICT, SMC, futures, stocks, options, order flow, and trading psychology.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How much does a single course cost?</div>
+                    <div class="faq-answer">A single specific course request is $14. You can check availability by messaging us directly.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is included in the Top 100?</div>
+                    <div class="faq-answer">For $40, you get access to a curated folder containing the 100 most highly requested courses based on our community data.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I request a course?</div>
+                    <div class="faq-answer">Click any "Request" button on this website. It will open a direct line to our Telegram admin desk where you can process your request.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where do I get free resources?</div>
+                    <div class="faq-answer">We share free educational files and setups in our public Telegram channel. Click "Join Free Resources" to enter.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are trading profits guaranteed?</div>
+                    <div class="faq-answer">No. Trading involves risk. The website provides educational resources only and does not guarantee profits or trading performance.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="border-top: none;">
+            <div class="disclaimer">
+                <strong>Educational Disclaimer:</strong> This website provides educational resources for informational and learning purposes only. Trading and investing involve risk, and no profit or performance guarantee is made. Users should make their own independent decisions and understand the risks involved. Only resources that are legally authorized for distribution should be offered through this website. Course names and trademarks remain the property of their respective owners.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            © 2026 Forex Vault Premium Library. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Course Data Integration (Preserved your existing array)
+        const courses = [
+            ["01","ICT 2022 & 2023 Mentorships","ICT / SMC"],
+            ["02","ICT Inner Circle Trader Strategy Complete Course","ICT / SMC"],
+            ["03","The MMXM Trader's Course 2.0","ICT / SMC"],
+            ["04","SMB - DNA of Successful Trading","Professional Trading"],
+            ["05","G7FX - Foundation, Pro, and Fundamentals","Forex"],
+            ["06","PTM - Professional Trading Masterclass by Anton Kreil","Professional Trading"],
+            ["07","Falcon FX - The Falcon Mechanics","Forex"],
+            ["08","Phantom Trading Strategy 2024","Forex"],
+            ["09","TJR Trades - The Blueprint / The Profit Blueprint","Trading"],
+            ["10","Mark Minervini - Private Access 2022 & 2023","Stocks / Momentum"],
+            ["11","WWA Team - WWA Trading","Trading"],
+            ["12","Vertex Investing 2023","Investing"],
+            ["13","Axia Futures - Market Profile & The Footprint Course","Futures / Order Flow"],
+            ["14","Wallstreet Academy - CUE Banks","Trading"],
+            ["15","Paladin - Funded Trading Institution","Prop Trading"],
+            ["16","Daye's Quarterly Theory Mentorship","Market Structure"],
+            ["17","MentFX / Trading Mentorship","ICT / SMC"],
+            ["18","Photon Trading - Zero To Funded","Forex"],
+            ["19","TradePro Academy - Futures Day Trading and Order Flow","Futures / Order Flow"],
+            ["20","Jim Dalton - Market Profile Primer","Market Profile"],
+            ["21","Chris Capre - Advanced Price Action Course","Price Action"],
+            ["22","Trader Dante - Edges for Ledges / Module 3","Professional Trading"],
+            ["23","Zeussy - The Ones That Know / MMXM Course","ICT / SMC"],
+            ["24","Romeo TPT - Time & Turtle Soup / CRT Unlocked","Price Action"],
+            ["25","Beat The Market Makers - Steve Mauro","Trading"],
+            ["26","Jigsaw Trading Software Course","Order Flow"],
+            ["27","Booming Bulls","Indian Market"],
+            ["28","Nora Bystra International","Trading"],
+            ["29","Mansor Sapari - Supply and Demand Masterclass","Supply & Demand"],
+            ["30","Ali Khan - Inner Circle Dragons Mentorship","ICT / SMC"],
+            ["31","Trading Hub 2.0 / 3.0 / 4.0","Trading"],
+            ["32","The Secret Mindset Academy","Trading Psychology"],
+            ["33","The Volume Traders - Order Flow Mastery","Order Flow"],
+            ["34","Trade With Profile - Videos On Demand Pathway","Market Profile"],
+            ["35","Urban Forex - Mastering Price Action 2.0","Forex / Price Action"],
+            ["36","Trading Geek - The Trading Blueprint","Trading"],
+            ["37","Forex Trading A-Z - Bull Market Mastery","Forex"],
+            ["38","PCT Trader Bootcamp / Andrew Aziz - Peak Capital Trading","Day Trading"],
+            ["39","Scott Pulcini Webinar","Trading"],
+            ["40","Alchemist FX - Latest Sessions","Forex / SMC"],
+            ["41","The Trading Shelter - JROD_FX","Forex"],
+            ["42","The LIT Awakening Masterguide 2023 - ReimFX","ICT / SMC"],
+            ["43","Arjoio MMT - Masterclass","Trading"],
+            ["44","Evolution Markets FX - TPOT 2.0","Forex"],
+            ["45","The Private Banker Course","Trading"],
+            ["46","Wyckoff Analytics - Practices / Point and Figure","Wyckoff"],
+            ["47","Trading Busters Pro Trading Formula","Trading"],
+            ["48","Master Trader Advanced Technical Strategies - Greg Capra","Technical Analysis"],
+            ["49","TraderLion - High Tight Flag Masterclass","Stocks / Momentum"],
+            ["50","Option Omega Academy - 1DTE Crash Course","Options"],
+            ["51","C Williams - The Swag Academy","Forex"],
+            ["52","RockzFX - Masterclass 5.0","Forex"],
+            ["53","TradingMarkets - AI For Traders","Trading / AI"],
+            ["54","Trading Legend F&O","Indian Market"],
+            ["55","Forex Chasers 3.0","Forex"],
+            ["56","The Proper Trader - Smart Money Concepts","ICT / SMC"],
+            ["57","TechnicalGodsFX Academy","Forex"],
+            ["58","Jacob Speculates - Unveiling The Charts","Market Structure"],
+            ["59","Smart Money Team (SMT) Course","ICT / SMC"],
+            ["60","Limitless Trading Academy V3","Forex"],
+            ["61","FX GOAT 3.0 - Mastery of Price Action","Price Action"],
+            ["62","TradeAcc - The Profile Formula","Market Profile"],
+            ["63","Zlatan Mentorship 2025","Trading"],
+            ["64","NJAT - The RIMS Strategy 2023","Forex"],
+            ["65","A Guide to Market Structure Trading","Market Structure"],
+            ["66","The Currency Merchant Course","Forex"],
+            ["67","TradebySCI Course","Trading"],
+            ["68","Lex Van Dam - Million Dollar Traders","Trading"],
+            ["69","Rayner Teo - Pro Traders Edge","Trading"],
+            ["70","Nial Fuller - Price Action Trading","Price Action"],
+            ["71","Order Flow Delta Trading Course","Order Flow"],
+            ["72","Blackwatch Advisory 2025","Trading"],
+            ["73","Chris Lori - Pro Trader's Club 2023 Edition","Forex"],
+            ["74","TradingView Pine Script 102 - Complete Strategy Guide","Trading / Coding"],
+            ["75","The Profitable Loser Course","Trading Psychology"],
+            ["76","Feibel Trading - Logical Price Action","Price Action"],
+            ["77","Fenix Pinheiro Trading - Advanced Trading Mentorship","Trading"],
+            ["78","Dodgy's Dungeon - Ultimate Trading Course","Trading"],
+            ["79","ICT Prodigy - Alemr98 / Alex S.","ICT / SMC"],
+            ["80","IPDAX Bootcamp","Market Structure"],
+            ["81","The Chart Guys - Essential Candlesticks","Technical Analysis"],
+            ["82","The Naked Eye - Raw Data Analytics Masterclass","Technical Analysis"],
+            ["83","Trading180 - Supply & Demand Zone Trading","Supply & Demand"],
+            ["84","Simpler Trading - Stop Missing Hidden Trades Elite","Trading"],
+            ["85","PropEdge Trading - Mastering The Orderbook","Order Flow"],
+            ["86","Trade With Sid - Mentorship Program 3.0","Trading"],
+            ["87","The Fanatic Way - TFDW Bundle","Forex"],
+            ["88","Forex Robots Masterclass","Forex / Automation"],
+            ["89","Trading Framework - 7 Day Intensive Trader Training","Trading"],
+            ["90","Market Profile - Trading Master Session","Market Profile"],
+            ["91","Ali Yusof Mentorship","Trading"],
+            ["92","Nicola Delic - Forex Master Levels","Forex"],
+            ["93","Larry Williams - Picture Perfect Trading","Futures / Trading"],
+            ["94","Quantum Trading","Trading"],
+            ["95","Trading Composure - Mastering Your Mind","Trading Psychology"],
+            ["96","Awie SNR Course - English Subtitles","Price Action"],
+            ["97","Trade Simple FX","Forex"],
+            ["98","Capital Markets Mastery - Valuation, Trading & Risk Control","Markets / Risk"],
+            ["99","ICT Snipers - 3 Days Workshop","ICT / SMC"],
+            ["100","Liquidity University 2022","Liquidity / SMC"]
+        ];
+
+        // Search Logic
+        const categoryNames = ["All", "Forex", "ICT / SMC", "Price Action", "Futures / Order Flow", "Stocks / Momentum", "Trading Psychology", "Market Profile", "Order Flow", "Trading"];
+        const categoriesContainer = document.getElementById("categoryFilter");
+        const courseGrid = document.getElementById("courseGrid");
+        const searchInput = document.getElementById("searchInput");
+        const resultCount = document.getElementById("resultCount");
+        
+        let selectedCategory = "All";
+
+        // Render Categories
+        categoriesContainer.innerHTML = categoryNames.map(cat => 
+            `<button class="category-btn ${cat === "All" ? "active" : ""}" data-category="${cat}">${cat}</button>`
+        ).join("");
+
+        // Category Click Event
+        categoriesContainer.querySelectorAll(".category-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                categoriesContainer.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                selectedCategory = button.dataset.category;
+                renderCourses();
+            });
+        });
+
+        // Render Courses
+        function renderCourses() {
+            const query = searchInput.value.toLowerCase().trim();
+            const filtered = courses.filter(c => 
+                c.join(" ").toLowerCase().includes(query) &&
+                (selectedCategory === "All" || c[2].includes(selectedCategory))
+            );
+
+            if (filtered.length === 0) {
+                resultCount.textContent = "0 courses found.";
+                courseGrid.innerHTML = `
+                    <div class="no-results">
+                        <h3 style="margin-bottom:10px;">No matching course found in the featured index.</h3>
+                        <p style="color:var(--text-muted); margin-bottom:20px;">We likely have it in our complete 1000+ library.</p>
+                        <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-primary">Request Specific Course via Telegram</a>
+                    </div>`;
+                return;
+            }
+
+            resultCount.textContent = `Showing ${filtered.length} featured courses`;
+            
+            courseGrid.innerHTML = filtered.map(c => `
+                <article class="course-card">
+                    <div>
+                        <div class="course-meta">
+                            <span class="course-id">#${c[0]}</span>
+                            <span class="course-tag">${c[2]}</span>
+                        </div>
+                        <h3>${c[1]}</h3>
+                    </div>
+                    <a href="https://t.me/+v1BOi_dEDqtiYjc1" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:20px; padding: 10px;">Request Course</a>
+                </article>
+            `).join("");
+        }
+
+        // Search Input Event
+        searchInput.addEventListener("input", renderCourses);
+
+        // Initial Render
+        renderCourses();
+    </script>
+</body>
+</html>
